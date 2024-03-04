@@ -1,8 +1,7 @@
-
-import express from 'express';
-import errorHandler from './middlewares/error-handler.middleware';
-import statusRoute from './routes/status.route';
-import usersRoute from './routes/users.route';
+import express from "express";
+import statusRoute from "./routes/status.route";
+import usersRoute from "./routes/users.route";
+import errorHandler from "./middlewares/error-handler.middleware";
 
 const app = express();
 
@@ -18,6 +17,6 @@ app.use(usersRoute);
 app.use(errorHandler);
 
 // Inicialização do servidor
-app.listen(3000, () => {
-    console.log('Aplicação executando na porta 3000!');
+app.listen(5000, () => {
+  console.log("Aplicação executando na porta 5000!");
 });
